@@ -1,0 +1,643 @@
+        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+        :root {
+
+            --poppins: "Poppins", sans-serif;
+
+            --lato: "Lato", sans-serif;
+
+
+
+            --light: #f9f9f9;
+
+            --blue: green;
+
+            --light-blue: #cfe8ff;
+
+            --grey: #eee;
+
+            --dark-grey: #aaaaaa;
+
+            --dark: #342e37;
+
+            --red: rgb(195, 47, 47);
+
+            --yellow: orangered;
+
+            --light-yellow: #fff2c6;
+
+            --orange: #fd7238;
+
+            --light-orange: #ffe0d3;
+
+        }
+
+        body {
+
+            font-family: "Poppins", sans-serif;
+
+            background: var(--grey);
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        #map_d9a916c2ebb288ad74dd6fb187fc67a4 {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 100%;
+
+            left: 0%;
+
+            top: 0%;
+
+        }
+
+        .leaflet-container {
+
+            font-size: 1rem;
+
+        }
+
+        
+
+        
+
+        .form{
+
+        
+
+            display: none;
+
+            position: fixed;
+
+            top: 70px;
+
+            left: 50px;
+
+            background: white;
+
+            padding: 10px;
+
+            border-radius: 5px;
+
+            border: 2px solid black;
+
+            z-index: 1000;
+
+            margin-bottom: 2px;
+
+     
+
+        } 
+         
+        .form label, .form input, .form textarea {
+
+            width: 100%; /* Assure que les éléments internes s'adaptent à la largeur du formulaire */
+            margin-bottom: 5px;
+        }
+
+        
+
+        .legend{
+
+            position: fixed;
+
+            bottom: 50px;
+
+            left: 50px;
+
+            width: 200px;
+
+            height: 60px;
+
+            background-color: white;
+
+            border: 2px solid grey;
+
+            z-index: 9999;
+
+            font-size: 14px;
+
+            padding: 10px;
+
+        }
+
+        
+
+        .alert{
+
+           position: fixed;
+
+            bottom: 100px;
+
+            left: 50px;
+
+            width: 200px;
+
+            height: 50px;
+
+            margin-bottom: 20px;
+
+            background-color: white;
+
+            border: 2px solid grey;
+
+            z-index: 9999;
+
+            font-size: 14px;
+
+            padding: 10px;
+
+            text-align: center;
+
+        }
+
+            
+
+        #custom-button {
+
+            position: fixed;
+
+            top: 10px;
+
+            right:100px;
+
+            z-index: 1000;
+
+            align-items: center;
+
+        }
+
+    
+
+        #custom-button a {
+
+            background-color: #FF0000;
+
+            border: none;
+
+            color: white;
+
+            padding: 10px 20px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            display: inline-block;
+
+            font-size: 14px;
+
+            margin: 4px 2px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+        }
+
+    
+
+        #custom-button button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+        @media only screen and (max-width: 340px) and (max-height: 500px) {
+
+            
+
+        .form{
+
+           top: 50px; /* Ajuste la position pour mieux s'adapter à la hauteur réduite */
+
+            left: 35px; /* Réduit la distance depuis le bord gauche pour maximiser l'espace */
+
+            right: 10px; /* Ajoute une contrainte droite pour s'assurer que le formulaire est bien centré */
+
+            width: 250px; /* Permet au formulaire de s'adapter à la largeur disponible */
+
+            padding: 5px; /* Réduit le padding pour maximiser l'espace intérieur */
+
+            font-size: 14px; /* Ajuste la taille de la police pour améliorer la lisibilité sur petit écran */
+
+            overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+
+            max-height: calc(100vh - 40px); /* S'assure que la hauteur du formulaire ne dépasse pas l'écran */
+
+            margin: 0; /* Enlève les marges pour maximiser l'espace disponible */
+
+            height: 280px;
+
+    }
+
+
+
+        /* Ajustements pour les éléments internes si nécessaire */
+
+        .form label, .form input, .form textarea, .form button {
+
+            width: 100%; /* Assure que les éléments internes s'adaptent à la largeur du formulaire */
+            margin-bottom: 5px;
+        }
+
+        
+
+        .form h4{
+
+            margin-left: 25px;
+
+        }
+
+            
+
+        .legend{
+
+           bottom: 20px;
+
+        }
+
+        
+
+        .alert{
+
+            bottom: 70px;
+
+        }
+
+        #custom-button {
+
+          right: 75px;
+
+          
+
+        
+
+        }
+
+        #custom-button a {
+
+            background-color: #FF0000;
+
+            border: none;
+
+            color: white;
+
+            padding: 10px 15px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            display: inline-block;
+
+            font-size: 12px;
+
+            margin: 4px 2px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+        }
+
+        
+
+        
+
+        }
+
+        
+
+         @media only screen and (max-width: 340px) and (min-height: 501px) and (max-height: 570px) {
+
+            
+
+        .form{
+
+           top: 50px; /* Ajuste la position pour mieux s'adapter à la hauteur réduite */
+
+            left: 35px; /* Réduit la distance depuis le bord gauche pour maximiser l'espace */
+
+            right: 10px; /* Ajoute une contrainte droite pour s'assurer que le formulaire est bien centré */
+
+            width: 250px; /* Permet au formulaire de s'adapter à la largeur disponible */
+
+            padding: 5px; /* Réduit le padding pour maximiser l'espace intérieur */
+
+            font-size: 14px; /* Ajuste la taille de la police pour améliorer la lisibilité sur petit écran */
+
+            overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+
+            max-height: calc(100vh - 40px); /* S'assure que la hauteur du formulaire ne dépasse pas l'écran */
+
+            margin: 0; /* Enlève les marges pour maximiser l'espace disponible */
+
+            height: 375px;
+
+    }
+
+
+
+        /* Ajustements pour les éléments internes si nécessaire */
+
+        .form label, .form input, .form textarea, .form button {
+
+            width: 100%; /* Assure que les éléments internes s'adaptent à la largeur du formulaire */
+            margin-bottom: 5px;
+        }
+
+        
+
+        .form h4{
+
+            margin-left: 25px;
+
+        }
+
+            
+
+        .legend{
+
+           bottom: 20px;
+
+        }
+
+        
+
+        .alert{
+
+            bottom: 70px;
+
+        }
+
+        #custom-button {
+
+          right: 75px;
+
+          
+
+        
+
+        }
+
+        
+        #custom-button a {
+
+            background-color: #FF0000;
+
+            border: none;
+
+            color: white;
+
+            padding: 10px 15px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            display: inline-block;
+
+            font-size: 12px;
+
+            margin: 4px 2px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+        }
+
+
+
+        
+
+        
+
+        }
+
+        
+
+        
+
+        @media only screen and (max-width: 340px) and (min-height: 571px) {
+
+            
+
+        .form{
+
+           left: 8px;
+
+           width: 300px;
+
+           top: 65px;
+           
+           margin: 0; /* Enlève les marges pour maximiser l'espace disponible */
+           
+           max-height: calc(100vh - 40px); /* S'assure que la hauteur du formulaire ne dépasse pas l'écran */
+           
+           overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+           
+
+        }
+
+        
+
+        .form h4{
+
+            margin-left: 28px;
+
+        }
+
+            
+
+        .legend{
+
+           bottom: 20px;
+
+        }
+
+        
+
+        .alert{
+
+            bottom: 70px;
+
+        }
+
+        #custom-button {
+
+          right: 75px;
+
+          
+
+        
+
+        }
+
+        
+        #custom-button a {
+
+            background-color: #FF0000;
+
+            border: none;
+
+            color: white;
+
+            padding: 10px 15px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            display: inline-block;
+
+            font-size: 12px;
+
+            margin: 4px 2px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+        }
+
+        
+
+        
+
+        }
+
+        @media only screen and (min-width: 341px) and (max-width: 362px){
+
+            
+
+        .form{
+
+           left: 30px;
+
+           width: 300px;
+
+           top: 50px;
+           
+           margin: 0; /* Enlève les marges pour maximiser l'espace disponible */
+           
+           max-height: calc(100vh - 40px); /* S'assure que la hauteur du formulaire ne dépasse pas l'écran */
+           
+           overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+
+        }
+
+        
+
+        .form h4{
+
+            margin-left: 28px;
+
+        }
+
+            
+
+        .legend{
+
+           bottom: 20px;
+
+        }
+
+        
+
+        .alert{
+
+            bottom: 70px;
+
+        }
+
+        #custom-button {
+
+          right: 75px;
+
+          
+
+        
+
+        }
+
+
+
+        
+
+        }
+
+        
+
+        
+
+        @media only screen and (min-width: 363px) and (max-width: 390px) {
+
+        .form{
+            left: 20px;
+            top: 70px; 
+            
+            overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+            
+            height: 385px;
+            
+            margin: 0; /* Enlève les marges pour maximiser l'espace disponible */
+            
+            max-height: calc(100vh - 40px); /* S'assure que la hauteur du formulaire ne dépasse pas l'écran */
+            
+            padding: 5px; /* Réduit le padding pour maximiser l'espace intérieur */
+            
+            
+        }
+
+        
+        #custom-button {
+        
+                right: 75px;
+        
+        
+        
+        
+        
+            }
+
+                .form h4{
+
+            margin-left: 28px;
+
+        }
+
+            
+
+        .legend{
+
+           bottom: 20px;
+
+        }
+
+        
+
+        .alert{
+
+            bottom: 70px;
+
+        }
+            
+
+          }
+
+         @media only screen and (min-width: 1024px) and (max-width: 1025px){
+
+        .form{
+            left: 270px;
+        }
+
+        }
